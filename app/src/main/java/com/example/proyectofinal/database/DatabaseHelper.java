@@ -28,13 +28,38 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public boolean findUser(UserData data){
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select * from User", null, null);
+        while (cursor.moveToNext()){
+            String username = cursor.getString(1);
+            //String password = cursor.getString(2);
+
+            if(username.equals(data.getUsername())){
+                Log.e(TAG, "LoginUser: Usuario ya existe.");
+                cursor.close();
+                sqLiteDatabase.close();
+                return true;
+            } /*else {
+                Log.e(TAG, "LoginUser: Error en el login de Usuario.");
+                cursor.close();
+                sqLiteDatabase.close();
+                return false;
+            }*/
+        }
+        cursor.close();
+        sqLiteDatabase.close();
+
+        return false;
+    }
+
     public long registerUser(UserData data){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", data.getUsername());
         contentValues.put("password", data.getPassword());
         long user = sqLiteDatabase.insert("User", null, contentValues);
-        if(user != 1){
+        if(user != -1){
             Log.e(TAG, "registerUser: Usuario registrado correctamente");
         } else {
             Log.e(TAG, "registerUser: error al registrar usuario...");
@@ -43,7 +68,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return user;
     }
 
-    public void loginUser(UserData data){
+    //public long userExists(UserData data)
+
+    public boolean loginUser(UserData data){
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("select * from User", null, null);
         while (cursor.moveToNext()){
@@ -52,11 +79,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             if(username.equals(data.getUsername()) && password.equals(data.getPassword())){
                 Log.e(TAG, "LoginUser: Usuario loggeado exitosamente.");
-            } else {
+                cursor.close();
+                sqLiteDatabase.close();
+                return true;
+            } /*else {
                 Log.e(TAG, "LoginUser: Error en el login de Usuario.");
-            }
+                cursor.close();
+                sqLiteDatabase.close();
+                return false;
+            }*/
         }
         cursor.close();
         sqLiteDatabase.close();
+
+        return false;
     }
 }
