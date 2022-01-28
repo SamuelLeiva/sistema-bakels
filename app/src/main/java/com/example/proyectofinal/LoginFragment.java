@@ -73,7 +73,7 @@ public class LoginFragment extends Fragment {
                 } else
                  {
                     passwordTextInput.setError(null);
-                    ((NavigationHost) getActivity()).navigateTo(new AnotherFragment(), false);
+                    ((NavigationHost) getActivity()).navigateTo(new ProductListFragment(), false);
                 }
             }
         });

@@ -9,22 +9,26 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
+    private static final int DATABASE_VERSION = 22;
 
     public DatabaseHelper(@Nullable Context context){
-        super(context, "name.db", null, 21);
+        super(context, "name.db", null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table if not exists User (id integer primary key autoincrement, username text, password text)");
-
+        db.execSQL("create table if not exists Product (id integer primary key autoincrement, name text, brand text, category text, stock number, price number)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists User");
+        db.execSQL("drop table if exists Product");
         onCreate(db);
     }
 
@@ -94,4 +98,58 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return false;
     }
+
+    /* *** Products *** */
+    public long insertProducts(ProductData data) {
+
+        long product = 0;
+        try {
+            SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+            ContentValues values = new ContentValues();
+            values.put("name", data.getName());
+            values.put("brand", data.getBrand());
+            values.put("category" , data.getCategory());
+            values.put("stock", data.getStock());
+            values.put("price", data.getPrice());
+
+            product = sqLiteDatabase.insert("Product", null, values);
+            if (product != -1){
+                Log.e(TAG, "insertProducts: productos insertados exitosamente.");
+            }
+        } catch (Exception ex) {
+            Log.e(TAG, "insertProducts: error al insertar productos." +ex.getMessage());
+        }
+
+        return product;
+    }
+
+    public ArrayList<ProductData> getProducts() {
+
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+
+        ArrayList<ProductData> productList = new ArrayList<>();
+        ProductData product = null;
+        Cursor cursorProductos = null;
+
+        cursorProductos = sqLiteDatabase.rawQuery("select * from Product", null );
+
+        if(cursorProductos.moveToFirst()) {
+            do {
+                product = new ProductData();
+                product.setId(cursorProductos.getInt(0));
+                product.setName(cursorProductos.getString(1));
+                product.setBrand(cursorProductos.getString(2));
+                product.setCategory(cursorProductos.getString(3));
+                product.setStock(cursorProductos.getInt(4));
+                product.setPrice(cursorProductos.getDouble(5));
+                productList.add(product);
+            } while (cursorProductos.moveToNext());
+        }
+
+        cursorProductos.close();
+        return productList;
+    }
+
+
 }
