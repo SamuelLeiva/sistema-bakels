@@ -13,4 +13,7 @@
     <string name="product_category">Category</string>
     <string name="product_stock">Stock</string>
     <string name="product_price">Price</string>
+
+    <string name="link_login_text">Ya tiene una cuenta? Ir al login.</string>
+    <string name="link_register_text">No tienes una cuenta? Regístrate aquí.</string>
 </resources>

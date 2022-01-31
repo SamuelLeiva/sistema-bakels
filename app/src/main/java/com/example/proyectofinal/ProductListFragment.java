@@ -55,10 +55,10 @@ public class ProductListFragment extends Fragment {
 
         productArrayList = new ArrayList<>();
 
-//        for(ProductData item: initProductEntryList(getResources())){
-//            ProductData product = new ProductData(item.getName(), item.getBrand(),item.getCategory(), item.getStock(), item.getPrice());
-//            databaseHelper.insertProducts(product);
-//        }
+        for(ProductData item: initProductEntryList(getResources())){
+           ProductData product = new ProductData(item.getName(), item.getBrand(),item.getCategory(), item.getStock(), item.getPrice());
+            databaseHelper.insertProducts(product);
+       }
 
         int largePadding = getResources().getDimensionPixelSize(R.dimen.product_grid_spacing);
         int smallPadding = getResources().getDimensionPixelSize(R.dimen.product_grid_spacing_small);

@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,29 +36,31 @@ public class LoginFragment extends Fragment {
         final TextInputLayout passwordTextInput = view.findViewById(R.id.password_text_input);
         final TextInputEditText passwordTextEditText = view.findViewById(R.id.password_edit_text);
 
+        final TextView registerTv = view.findViewById(R.id.link_register_text);
+
         MaterialButton loginButton = view.findViewById(R.id.login_button);
-        MaterialButton registerButton = view.findViewById(R.id.register_button);
+        //MaterialButton registerButton = view.findViewById(R.id.register_button);
 
         databaseHelper = new DatabaseHelper(this.getContext());
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String getUsername = usernameTextEditText.getText().toString();
-                String getPassword = passwordTextEditText.getText().toString();
-
-                UserData data = new UserData(getUsername, getPassword);
-
-                boolean userExists = databaseHelper.findUser(data);
-
-                if(userExists){
-                    openDialog("Un usuario con ese email ya existe");
-                } else {
-                    databaseHelper.registerUser(new UserData(getUsername, getPassword));
-                    openDialog("Nuevo usuario registrado.");
-                }
-            }
-        });
+//        registerButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String getUsername = usernameTextEditText.getText().toString();
+//                String getPassword = passwordTextEditText.getText().toString();
+//
+//                UserData data = new UserData(getUsername, getPassword);
+//
+//                boolean userExists = databaseHelper.findUser(data);
+//
+//                if(userExists){
+//                    openDialog("Un usuario con ese email ya existe");
+//                } else {
+//                    databaseHelper.registerUser(new UserData(getUsername, getPassword));
+//                    openDialog("Nuevo usuario registrado.");
+//                }
+//            }
+//        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +88,13 @@ public class LoginFragment extends Fragment {
                     passwordTextInput.setError(null);
                 }
                 return false;
+            }
+        });
+
+        registerTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((NavigationHost) getActivity()).navigateTo(new RegisterFragment(), false);
             }
         });
 
