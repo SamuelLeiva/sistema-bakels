@@ -60,6 +60,10 @@ public class ProductListFragment extends Fragment {
 //            databaseHelper.insertProducts(product);
 //        }
 
+        int largePadding = getResources().getDimensionPixelSize(R.dimen.product_grid_spacing);
+        int smallPadding = getResources().getDimensionPixelSize(R.dimen.product_grid_spacing_small);
+
+        recyclerView.addItemDecoration(new ProductGridItemDecoration(largePadding, smallPadding));
         ProductListAdapter adapter = new ProductListAdapter(databaseHelper.getProducts());
         recyclerView.setAdapter(adapter);
 
