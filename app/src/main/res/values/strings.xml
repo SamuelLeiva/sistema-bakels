@@ -7,4 +7,10 @@
     <string name="button_register">REGISTER</string>
 
     <string name="error_password">La password debe tener minimo 5 caracteres.</string>
+
+    <string name="product_name">Product</string>
+    <string name="product_brand">Brand</string>
+    <string name="product_category">Category</string>
+    <string name="product_stock">Stock</string>
+    <string name="product_price">Price</string>
 </resources>

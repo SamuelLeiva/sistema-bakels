@@ -10,5 +10,7 @@
 
     <color name="bakels_secondary">#83909F</color>
     <color name="bakels_primary">#003877</color>
+    <color name="bakels_background">#1976D2</color>
+    <color name="bakels_wave">#f5f3f0</color>
 
 </resources>

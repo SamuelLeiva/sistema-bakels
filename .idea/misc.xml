@@ -6,10 +6,15 @@
         <entry key="..\:/Ciclo5/DesarrolloMovil/ProyectoFinal/sistema-bakels/app/src/main/res/layout/activity_main.xml" value="0.1721014492753623" />
         <entry key="..\:/Ciclo5/DesarrolloMovil/ProyectoFinal/sistema-bakels/app/src/main/res/layout/another_fragment.xml" value="0.25416666666666665" />
         <entry key="..\:/Ciclo5/DesarrolloMovil/ProyectoFinal/sistema-bakels/app/src/main/res/layout/login_fragment.xml" value="0.1721014492753623" />
+        <entry key="..\:/DSI/CicloV/DesarrolloAplicacionesMovilesI/Bakels App/sistema-bakels/app/src/main/res/layout/product_card_fragment.xml" value="0.18704710144927536" />
+        <entry key="..\:/DSI/CicloV/DesarrolloAplicacionesMovilesI/Bakels App/sistema-bakels/app/src/main/res/layout/product_list_fragment.xml" value="0.22" />
+        <entry key="..\:/DSI/CicloV/DesarrolloAplicacionesMovilesI/sistema-bakels/app/src/main/res/layout/another_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSI/CicloV/DesarrolloAplicacionesMovilesI/sistema-bakels/app/src/main/res/layout/product_card_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSI/CicloV/DesarrolloAplicacionesMovilesI/sistema-bakels/app/src/main/res/layout/product_list_fragment.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -1,0 +1,149 @@
+[
+  {
+    "name": "RELLENO FRUTAL LES FRUITS RASPBERRY AL 50%",
+    "brand":"Bakels",
+    "category":"Brillos, Rellenos & Coberturas",
+    "stock": 43,
+    "price": 15.20
+  },
+  {
+    "name": "DELUXE CREME CAKE SABOR VAINILLA",
+    "brand": "Deluxe Company",
+    "category": "Pasteleria",
+    "stock": 23,
+    "price": 8.70
+  },
+  {
+    "name": "CARLOTA SABOR PIÑA",
+    "brand":"Bakels",
+    "category": "Confiteria",
+    "stock": 12,
+    "price": 9.90
+  },
+  {
+    "name": "CARLOTA SABOR NARANJA",
+    "brand": "Bakels",
+    "category": "Confiteria" ,
+    "stock": 24 ,
+    "price": 8.40
+  },
+  {
+    "name": "CARLOTA SABOR FRESA",
+    "brand": "Bakels",
+    "category": "Confiteria",
+    "stock": 31,
+    "price": 8.90
+  },
+  {
+    "name": "PAN DE MOLDE AL 100%",
+    "brand": "Varios",
+    "category": "Panaderia",
+    "stock": 70,
+    "price": 4.20
+  },
+  {
+    "name": "PAN DE YEMA AL 10%",
+    "brand": "Varios",
+    "category": "Panaderia",
+    "stock": 120,
+    "price": 0.15
+  },
+  {
+    "name": "VITAPAN SOFT INDUSTRIA",
+    "brand": "Bakels",
+    "category": "Panaderia",
+    "stock": 47,
+    "price": 4.20
+  },
+  {
+    "name": "PAN FIBRA MINUS",
+    "brand": "Varios",
+    "category": "Panaderia",
+    "stock": 38,
+    "price": 0.19
+  },
+  {
+    "name": "TURROMIEL",
+    "brand":		"Bakels",
+    "category": "Confiteria",
+    "stock": 77	,
+    "price": 10.15
+  },
+  {
+    "name": "PANETÓN CLASSIC"	,
+    "brand": "Bakels"	,
+    "category": "Panetón"	,
+    "stock": 100	,
+    "price": 12.20
+  },
+  {
+    "name": "PANETÓN GOLDEN"	,
+    "brand": "Bakels"	,
+    "category": "Panetón"	,
+    "stock": 70	,
+    "price": 15.70
+  },
+  {
+    "name": "PANETÓN PREMIUM"	,
+    "brand": "Bakels"	,
+    "category": "Panetón"	,
+    "stock": 39	,
+    "price": 16.40
+  },
+  {
+    "name": "MUFFINS MIX SABOR VAINILLA"	,
+    "brand": "Bakels"	,
+    "category": "Brillos, Rellenos & Coberturas"	,
+    "stock": 123	,
+    "price": 0.99
+  },
+  {
+    "name": "CARROT CAKE MIX"	,
+    "brand": "Bakels"	,
+    "category": "Brillos, Rellenos & Coberturas"	,
+    "stock": 43	,
+    "price": 14.50
+  },
+  {
+    "name": "CONCENTRATED TOPPING BASE"	,
+    "brand": "Bakels"	,
+    "category": "Cremas Tipo Chantilly & Jarabes"	,
+    "stock": 50	,
+    "price": 4.50
+  },
+  {
+    "name": "PASTRY TOPPING BAKELS"	,
+    "brand": "Bakels"	,
+    "category": "Cremas Tipo Chantilly & Jarabes"	,
+    "stock": 28	,
+    "price": 5.50
+  },
+  {
+    "name": "INSTANT CREAM SABOR VAINILLA"	,
+    "brand": "Bakels"	,
+    "category": "Cremas Tipo Chantilly & Jarabes"	,
+    "stock": 40	,
+    "price": 4.70
+  },
+  {
+    "name": "JARABE DE TRES LECHES DELIGHT"	,
+    "brand": "Bakels"	,
+    "category": "Cremas Tipo Chantilly & Jarabes"	,
+    "stock": 19	,
+    "price": 7.90
+  },
+  {
+    "name": "TRUFA CROCANTE NH"	,
+    "brand": "Bakels"	,
+    "category": "Brillos, Rellenos & Coberturas"	,
+    "stock": 15	,
+    "price": 75.00
+  },
+  {
+    "name": "RELLENO FRUTAL LES FRUITS BLUEBERRY AL 70%"	,
+    "brand": "Bakels"	,
+    "category": "Brillos, Rellenos & Coberturas"	,
+    "stock": 62	,
+    "price": 9.70
+  }
+]
